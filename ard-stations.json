@@ -1,0 +1,58 @@
+[
+  {
+    "id":"urn:ard:permanent-livestream-fusion:427917db94b8fd63",
+    "title":"SWR1 Baden-Württemberg",
+    "images":[
+      {
+        "url":"https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:44fd54d6934f3930/1x1?imwidth=600&w=600"
+      }
+    ],
+    "description":"Eins gehört gehört. SWR1.",
+    "binaries":[
+      {
+        "href":"https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
+      }
+    ]
+  },
+  {
+    "id":"urn:ard:permanent-livestream-fusion:3ef9f63bc15200a3",
+    "title":"SWR2",
+    "images":[
+      {
+        "url":"https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:049b7c9103020346/1x1?imwidth=600&w=600"
+      }
+    ],
+    "description":"SWR2. Kultur neu entdecken.",
+    "binaries":[
+      {
+        "href":"https://liveradio.swr.de/sw282p3/swr2/play.mp3"
+      }
+    ]
+  },
+  {
+    "id":"urn:ard:permanent-livestream-fusion:403f9a9b1cc6b394",
+    "title":"SWR3",
+    "images":[
+      {
+        "url":"https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:d00ea0af936c4888/1x1?imwidth=600&w=600"
+      }
+    ],
+    "description":"Mehr Hits. Mehr Kicks. Einfach SWR3.",
+    "binaries":[
+      {
+        "href":"https://liveradio.swr.de/sw282p3/swr3/play.mp3"
+      }
+    ]
+  },
+  {
+    "id" : "urn:ard:permanent-livestream-fusion:21bc82d5d8e49d8d",
+    "title" : "radioeins",
+    "images" : [ {
+      "url" : "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:39f886c7cb4c63a1/1x1?imwidth=600&w=600"
+    } ],
+    "description" : "Nur für Erwachsene",
+    "binaries" : [ {
+      "href" : "https://dispatcher.rndfnk.com/rbb/radioeins/live/mp3/mid"
+    } ]
+  }
+]

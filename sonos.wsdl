@@ -168,7 +168,7 @@
                             </xs:annotation>
                         </xs:any>
                     </xs:sequence>
-                 </xs:complexType>
+                </xs:complexType>
             </xs:element>
 
             <xs:simpleType name="itemType">
@@ -328,7 +328,7 @@
                         "authorizeAccount/appUrl" is not installed, it will use the information in this element to message
                         the user. -->
                         <xs:element name="installAction"    type="tns:callToActionInfo" minOccurs="0"/>
-                </xs:sequence>
+                    </xs:sequence>
 
                     <!-- if there is no app link for the given hardware, osVersion, sonosAppName combination this
                     element MUST be returned instead -->
@@ -412,7 +412,7 @@
                                     <xs:element name="author" type="xs:string" minOccurs="0" />
                                     <xs:element name="narratorId" type="xs:string" minOccurs="0" />
                                     <xs:element name="narrator" type="xs:string" minOccurs="0" />
-                                </xs:sequence>                              
+                                </xs:sequence>
                                 <xs:sequence>
                                     <xs:element name="producerId" type="xs:string" minOccurs="0" />
                                     <xs:element name="producer" type="xs:string" minOccurs="0" />
@@ -1249,10 +1249,10 @@
                 <xs:complexType>
                     <xs:choice>
                         <xs:sequence>
-	                        <xs:element name="SonosError" type="xs:int"/>
-	                        <xs:element name="ExceptionInfo" type="xs:string"/>
-                    	</xs:sequence>
-                    	<xs:element name="refreshAuthTokenResult" type="tns:deviceAuthTokenResult"/>
+                            <xs:element name="SonosError" type="xs:int"/>
+                            <xs:element name="ExceptionInfo" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:element name="refreshAuthTokenResult" type="tns:deviceAuthTokenResult"/>
                     </xs:choice>
                 </xs:complexType>
             </xs:element>
@@ -1496,7 +1496,7 @@
     </wsdl:message>
 
     <wsdl:message name="customFault">
-       <wsdl:part name="customFault" element="tns:customFault"/>
+        <wsdl:part name="customFault" element="tns:customFault"/>
     </wsdl:message>
 
     <wsdl:portType name="SonosSoap">
@@ -2059,7 +2059,7 @@
 
     <wsdl:service name="Sonos">
         <wsdl:port name="SonosSoap" binding="tns:SonosSoap">
-		<soap:address location=""/> <!-- UPDATE WITH SOAP_URI -->
+            <soap:address location="http://localhost:8081"/>
         </wsdl:port>
     </wsdl:service>
 
