@@ -1,0 +1,80 @@
+{
+  "1": [
+    {
+      "id": "urn:ard:permanent-livestream-fusion:64f39483c2811c2f",
+      "name": "Deutschlandfunk Nova",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:2fe48539d9d9ddb8/1x1?imwidth=720&w=720",
+      "stream": "https://st03.sslstream.dlf.de/dlf/03/128/mp3/stream.mp3"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:155ee87a97e09879",
+      "name": "Deutschlandfunk Kultur",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:9a359d5981c9429c/1x1?imwidth=720&w=720",
+      "stream": "https://st02.sslstream.dlf.de/dlf/02/128/mp3/stream.mp3"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:461db7a415829210",
+      "name": "Deutschlandfunk",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:401fad621a950cc4/1x1?imwidth=720&w=720",
+      "stream": "https://st01.sslstream.dlf.de/dlf/01/128/mp3/stream.mp3"
+    }
+  ],
+  "2": [
+    {
+      "id": "urn:ard:permanent-livestream-fusion:21bc82d5d8e49d8d",
+      "name": "radioeins",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:e4bae6eda2e0e427/1x1?imwidth=720&w=720",
+      "stream": "https://dispatcher.rndfnk.com/rbb/radioeins/live/mp3/mid"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:c3e93caf4302e316",
+      "name": "Fritz",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:4cd39ac272f3ccc1/1x1?imwidth=720&w=720",
+      "stream": "https://dispatcher.rndfnk.com/rbb/fritz/live/mp3/mid"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:e991bd49d62c5d35",
+      "name": "rbb 88.8",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:f4676c638fb0536b/1x1?imwidth=720&w=720",
+      "stream": "https://dispatcher.rndfnk.com/rbb/rbb888/live/mp3/mid"
+    }
+  ],
+  "3": [
+    {
+      "id": "urn:ard:permanent-livestream-fusion:427917db94b8fd63",
+      "name": "SWR1 Baden-Württemberg",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:913e50a88f29385a/1x1?imwidth=720&w=720",
+      "stream": "https://liveradio.swr.de/sw282p3/swr1bw/play.mp3"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:403f9a9b1cc6b394",
+      "name": "SWR3",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:b8b8d5cd75331f20/1x1?imwidth=720&w=720",
+      "stream": "https://liveradio.swr.de/sw282p3/swr3/play.mp3"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:039e64542fa80b7b",
+      "name": "SWR Aktuell",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:608c8f06e1dc0527/1x1?imwidth=720&w=720",
+      "stream": "https://liveradio.swr.de/sw282p3/swraktuell/play.mp3"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:016537cb75d5b0c9",
+      "name": "SWR1 Webradio: Deutsch",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:c89149da4eb76f8c/1x1?imwidth=720&w=720",
+      "stream": "https://liveradio.swr.de/sw331ch/raka13/play.aac"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:07bd0be87e0c032c",
+      "name": "SWR1 Webradio: Die 80er",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:c89149da4eb76f8c/1x1?imwidth=720&w=720",
+      "stream": "https://liveradio.swr.de/sw331ch/raka16/play.aac"
+    },
+    {
+      "id": "urn:ard:permanent-livestream-fusion:f02d6f1b6f173bc8",
+      "name": "DASDING Chillout - Dein Sound zum Chillen",
+      "cover": "https://api.ardmediathek.de/image-service/image-collections/urn:ard:image-collection:0820e93192ce09ca/1x1?imwidth=720&w=720",
+      "stream": "https://liveradio.swr.de/sw331ch/raka10/play.aac"
+    }
+  ]
+}

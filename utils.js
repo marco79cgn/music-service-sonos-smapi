@@ -1,41 +1,80 @@
-const stations = require("./ard-stations.json");
+// noinspection JSUnresolvedReference
 
-async function buildLibraryMetadataResult(res) {
-  let mediaMetadata = [];
+const providers = require("./providers.json");
+const stations = require("./stations.json");
 
-  for (const station of stations) {
-    var mediaMetadataEntry = {
-      itemType: "stream",
-      id: station.id,
-      title: station.title,
-      streamMetadata: {
-        logo: station.images[0].url
-      }
+async function getMetadataResult(itemId) {
+  return await buildMetadataResult(itemId);
+}
+
+async function getMediaMetadataResult(itemId) {
+  return await buildMediaMetadataResult(itemId);
+}
+
+async function buildMetadataResult(itemId) {
+
+  if(itemId === "root") {
+    let mediaCollection = [];
+
+    // add distinct providers as root playlists/folders
+    for (const provider of providers) {
+        const mediaMetadataEntry = {
+          itemType: "playlist",
+          id: provider.id,
+          title: provider.title,
+          albumArtURI: provider.imageURL
+        };
+        mediaCollection.push(mediaMetadataEntry);
+    }
+    return {
+      getMetadataResult: {
+        count: mediaCollection.length,
+        total: mediaCollection.length,
+        index: 0,
+        mediaCollection: mediaCollection
+      },
     };
-    mediaMetadata.push(mediaMetadataEntry);
+  } else {
+    return buildLibraryMetadataResult(itemId);
   }
+}
 
+async function buildLibraryMetadataResult(providerId) {
+  let mediaMetadata = [];
+  const channels = stations[providerId]
+
+  for (const station of channels) {
+      var mediaMetadataEntry = {
+        itemType: "stream",
+        id: station.id,
+        title: station.name,
+        streamMetadata: {
+          logo: station.cover
+        }
+      };
+      mediaMetadata.push(mediaMetadataEntry);
+  }
   return {
     getMetadataResult: {
-      count: stations.length,
-      total: stations.length,
+      count: mediaMetadata.length,
+      total: mediaMetadata.length,
       index: 0,
-      mediaMetadata: mediaMetadata, // Adjusted here
+      mediaMetadata: mediaMetadata
     },
   };
 }
 
-async function buildLibraryMediaMetadataResult(res) {
-  // console.log("id: " + res.id)
-  var selectedStation = stations.find(el => el.id === res.id)
+async function buildMediaMetadataResult(res) {
+
+  const selectedStation = getStationById(res.id)
+
   return {
     getMediaMetadataResult: {
       id: selectedStation.id,
       itemType: "stream",
-      title: selectedStation.title,
-      mimeType: "audio/mp3",
+      title: selectedStation.name,
       streamMetadata: {
-        logo: selectedStation.images[0].url
+        logo: selectedStation.cover
       }
     },
   };
@@ -43,18 +82,21 @@ async function buildLibraryMediaMetadataResult(res) {
 
 // Methods to invoke
 async function getMediaURI(id) {
-  var station = stations.find(el => el.id === id)
+  const selectedStation = getStationById(id);
+  console.log("Returning stream url for " + selectedStation.name + ": " + selectedStation.stream)
   return {
-    getMediaURIResult: station.binaries[0].href,
+    getMediaURIResult: selectedStation.stream
   }
 }
 
-async function getMetadataResult(libraryItemId) {
-    return await buildLibraryMetadataResult();
-}
-
-async function getMediaMetadataResult(libraryItemId) {
-  return await buildLibraryMediaMetadataResult(libraryItemId);
+function getStationById(id) {
+  const keys = Object.keys(stations);
+  for (let i of keys) {
+    if(stations[i].find(el => el.id === id)) {
+      return stations[i].find(el => el.id === id)
+    }
+  }
+  return "not found!"
 }
 
 module.exports = {

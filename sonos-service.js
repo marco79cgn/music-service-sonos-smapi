@@ -4,22 +4,19 @@ var sonosService = {
   Sonos: {
     SonosSoap: {
       getMetadata: function (args) {
-        let type = args["id"]; // "root" or abs library item id "li_laksjdfklasdj"
-        console.log("getMetadata args: " + JSON.stringify(args));
+        let type = args["id"]; // "root" or station id
         switch (type) {
-          case "root": // first request after selecting "ARD Audiothek" in the app. Returns the list of stations for now > folders in the future
+          case "root": // first request after selecting "ARD Audiothek" in the Sonos app. Returns the list of institutions as folders.
             return getMetadataResult(type);
-          default: // request after selecting a specific item inside a subfolder
-            return getMetadataResult(type); // this needs to be the same method due to SOAP doing SOAP things for the XML with the function name
+          default: // request after selecting a specific item inside a folder
+            return getMetadataResult(type);
         }
       },
       getMediaMetadata: function (args) {
-        console.log("getMediaMetadata called with args " + JSON.stringify(args));
         return getMediaMetadataResult(args);
       },
       // get the actual URI of the radio station
       getMediaURI: function (args) {
-        console.log("getMediaURI called with args " + JSON.stringify(args));
         return getMediaURI(args["id"]);
       },
       getLastUpdate: function (args) {

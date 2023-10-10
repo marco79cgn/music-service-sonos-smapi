@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "title": "Deutschlandradio",
+    "imageURL": "https://i.imgur.com/Squ45Jo.jpg"
+  },
+  {
+    "id": "2",
+    "title": "Rundfunk Berlin-Brandenburg",
+    "imageURL": "https://i.imgur.com/7ZZ9all.jpg"
+  },
+  {
+    "id": "3",
+    "title": "Südwestrundfunk",
+    "imageURL": "https://i.imgur.com/pmGHtVx.jpg"
+  }
+]
