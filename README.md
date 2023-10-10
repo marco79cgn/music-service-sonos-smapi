@@ -2,7 +2,7 @@
 
 A standalone server that is built on top of the Sonos Music API (SMAPI). It can be used as a basic framework to implement your own radio/music service on your Sonos speakers.
 
-**This is currently for development testing purposes, and is expected to change significantly**
+**This is currently for development testing purposes**
 
 <img src="https://i.imgur.com/n7tPVWT.png" width="700"/>
 
@@ -101,5 +101,5 @@ module.exports = Object.freeze({
 ### Step 3: Start the server and enjoy
 
 1. `nodemon server.js`
-2. Open the Sonos mobile app and select audiobookshelf
+2. Open the Sonos mobile app and select ARD Audiothek (or whatever you name it)
 3. Select a radio station to listen to
