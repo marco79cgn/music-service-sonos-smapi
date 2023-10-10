@@ -4,6 +4,8 @@ A standalone server that is built on top of the Sonos Music API (SMAPI). It can 
 
 **This is currently for development testing purposes, and is expected to change significantly**
 
+<img src="https://i.imgur.com/n7tPVWT.png" width="700"/>
+
 ## Features
 
 - show custom radio stations in Sonos by just adding them to the source file with name, cover and stream url
