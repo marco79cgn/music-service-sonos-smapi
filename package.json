@@ -1,5 +1,5 @@
 {
-  "name": "audiobookshelf-sonos",
+  "name": "audiothek-sonos",
   "version": "1.0.0",
   "description": "A standalone server that is built on top of the Sonos Music API (SMAPI). It can be used as a basic framework to implement your own radio/music service on your Sonos speakers.",
   "main": "server.js",
@@ -13,7 +13,7 @@
   "keywords": [
     "sonos",
     "audiobook",
-    "audiobookshelf",
+    "audiothek",
     "smapi"
   ],
   "author": "marco79cgn",
