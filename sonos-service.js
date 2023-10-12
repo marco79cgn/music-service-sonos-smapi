@@ -1,6 +1,6 @@
 const { getMetadataResult, getMediaURI, getMediaMetadataResult} = require("./utils");
 
-var sonosService = {
+const sonosService = {
   Sonos: {
     SonosSoap: {
       getMetadata: function (args) {
@@ -15,7 +15,7 @@ var sonosService = {
       getMediaMetadata: function (args) {
         return getMediaMetadataResult(args);
       },
-      // get the actual URI of the radio station
+      // get the actual stream url of the radio station
       getMediaURI: function (args) {
         return getMediaURI(args["id"]);
       },

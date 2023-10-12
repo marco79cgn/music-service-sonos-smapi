@@ -1,5 +1,4 @@
 const soap = require("soap");
-const { updateAudioBookshelfProgress } = require("./utils");
 const express = require("express");
 const config = require("./config");
 
@@ -7,7 +6,7 @@ const config = require("./config");
 const EXPRESS_APP = express();
 const SONOS_SOAP_SERVICE = require("./sonos-service");
 console.log("🚀 SONOS_SOAP_SERVICE:", SONOS_SOAP_SERVICE);
-const HTTP_PORT = config.HTTP_PORT;
+const HTTP_PORT = parseInt(process.env.PORT) || config.HTTP_PORT;
 console.log("🚀 HTTP_PORT:", HTTP_PORT);
 const SOAP_URI = config.SOAP_URI;
 console.log("🚀 SOAP_URI:", SOAP_URI);
@@ -16,7 +15,6 @@ console.log("🚀 SOAP_ENDPOINT:", SOAP_ENDPOINT);
 const SONOS_WSDL_FILE = config.SONOS_WSDL_FILE;
 
 /**********/
-
 EXPRESS_APP.use(express.json()); // express.json allows for native body parsing
 EXPRESS_APP.listen(HTTP_PORT, function () {
   /* 
@@ -41,11 +39,6 @@ EXPRESS_APP.listen(HTTP_PORT, function () {
     // console.log(data);
   };
 
-  /*
-    Sonos Cloud Queue Routes
-    "Cloud Queue" is a misnomer here. These routes are only used for handling "reporting" (audiobook progress updates). These endpoints exist outside
-    of the SMAPI / SOAP implementation above.
-  */
   EXPRESS_APP.get("/manifest", (req, res) => {
     console.log("[soapServer] /manifest called");
     res.send({

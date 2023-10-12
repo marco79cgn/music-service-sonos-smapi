@@ -12,7 +12,6 @@
   },
   "keywords": [
     "sonos",
-    "audiobook",
     "audiothek",
     "smapi"
   ],
@@ -24,7 +23,6 @@
   "homepage": "https://github.com/marco79cgn/music-service-sonos-smapi/blob/main/README.md",
   "dependencies": {
     "axios": "^0.26.1",
-    "dotenv": "^16.3.1",
     "express": "^4.18.1",
     "soap": "^0.45.0"
   }
